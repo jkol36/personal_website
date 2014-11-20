@@ -1,0 +1,48 @@
+html
+	head
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+		script(src="{{STATIC_URL}}/profiles/js/eldarion-ajax.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+		script(src="{{STATIC_URL}}/profiles/js/holder.js")
+		link(rel="stylesheet", href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+		link(rel="stylesheet",href='http://fonts.googleapis.com/css?family=Oxygen')
+		link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,300italic|Oxygen")
+		link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Raleway")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+	body
+		.container-fluid
+			.jumbotron
+				.row(style="text-align:center;")
+					img.img-circle(src="https://avatars0.githubusercontent.com/u/2565155?v=3&u=7fd024aef3b6f0e89e238a0c5e22ae71bae6d665&s=140")
+					h1#header(style="display:none; height:70px;") Hey, I'm Jon.
+					p#effect2(style="display:none; height:30px;") I love to build 
+						span(style="color:blue;") things.
+					p#products(style="height:30px; display:none;") Especially 
+						span(style="color:purple;") Web Applications.
+					button#button.btn.btn-success(style="display:none;") Learn more about me
+					
+
+
+	script(type="text/javascript")
+		$(document).ready(function() {
+			$("#header").animate({
+				width:"toggle"
+				},3000, function() {
+				$("#effect2").animate({
+					width:"toggle"
+					}, 3000, function() {
+					$(this).animate({
+						}, 3000, function() {
+						$("#products").animate({
+							width:"toggle"
+							}, 3000, function() {
+							$("#button").toggle()
+							}
+							);
+							});
+						});
+					});
+				});
+			
